@@ -35,7 +35,7 @@ NOTE: You will not be able to run `test.ipynb`,`etl.ipynb`, or `etl.py` until yo
 **_Below are steps you can follow to complete the project_⬇️**
 
 1. Create Tables
-- [] Write CREATE statements in `sql_queries.py` to create each table.
+- [x] Write CREATE statements in `sql_queries.py` to create each table.
 - [] Write DROP statements in `sql_queries.py` to drop each table if it exists.
 - [] Run `create_tables.py` to create your database and tables.
 - [] Run `test.ipynb` to confirm the creation of your tables with the correct columns. Make sure to click "Restart kernel" to close the connection to the database after running this notebook.
