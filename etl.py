@@ -13,7 +13,7 @@ def process_song_file(cur, filepath):
     # insert song record
     song_data_df = df[['song_id', 'title', 'artist_id', 'year', 'duration']]
     song_data_values = song_data_df.values
-    first_rcrd_df = song_df_values[0]
+    first_rcrd_df = song_data_values[0]
     song_data = first_rcrd_df.tolist()
     
     cur.execute(song_table_insert, song_data)
