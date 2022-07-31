@@ -18,11 +18,11 @@ def process_song_file(cur, filepath):
     
     cur.execute(song_table_insert, song_data)
     
-    # insert artist record
-    artists_data_df = df[['artist_id', 'name', 'location', 'latitude', 'longitude']]
-    artist_data_values = artists_data_df.values
-    first_rcrd_df = artist_data_values[0]
-    artist_data = first_rcrd_df.tolist()
+    # Insert artist record
+    artist_data_df = df[['artist_id', 'artist_name', 'artist_location', 'artist_latitude', 'artist_longitude']]
+    artist_data_values = artist_data_df.values
+    first_record_df = artist_data_values[0]
+    artist_data = first_record_df.tolist()
     
     cur.execute(artist_table_insert, artist_data)
 
