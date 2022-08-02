@@ -16,7 +16,10 @@ def process_song_file(cur, filepath):
     first_rcrd_df = song_data_values[0]
     song_data = first_rcrd_df.tolist()
     
-    cur.execute(song_table_insert, song_data)
+    try:
+        cur.execute(song_table_insert, song_data)
+    except psycopg2.Error as error:
+        print(error)
     
     # Insert artist record
     artist_data_df = df[['artist_id', 'artist_name', 'artist_location', 'artist_latitude', 'artist_longitude']]
@@ -24,7 +27,10 @@ def process_song_file(cur, filepath):
     first_rcrd_df = artist_data_values[0]
     artist_data = first_rcrd_df.tolist()
     
-    cur.execute(artist_table_insert, artist_data)
+    try:
+        cur.execute(artist_table_insert, artist_data)
+    except psycopg2.Error as error:
+        print(error)
 
 
 def process_log_file(cur, filepath):
@@ -45,7 +51,10 @@ def process_log_file(cur, filepath):
     
 
     for i, row in time_df.iterrows():
-        cur.execute(time_table_insert, list(row))
+        try:
+            cur.execute(time_table_insert, list(row))
+        except psycopg2.Error as error:
+            print(error)
 
     # load user table
     user_df = df[['userId', 'firstName', 'lastName', 'gender', 'level']]
@@ -53,7 +62,10 @@ def process_log_file(cur, filepath):
 
     # insert user records
     for i, row in user_df.iterrows():
-        cur.execute(user_table_insert, row)
+        try:
+            cur.execute(user_table_insert, row)
+        except psycopg2.Error as error:
+            print(error)
 
     # insert songplay records
     for index, row in df.iterrows():
@@ -92,6 +104,8 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
+    
+    
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
 
