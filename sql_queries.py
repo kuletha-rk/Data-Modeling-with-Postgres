@@ -37,7 +37,7 @@ Fact tables
 """
 songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays
                          (songplay_id SERIAL PRIMARY KEY,
-                         start_time timestamp,
+                         start_time timestamp REFERENCES time(start_time),
                          user_id int NOT NULL REFERENCES users(user_id),
                          level varchar,
                          song_id varchar REFERENCES songs(song_id),
@@ -59,15 +59,15 @@ song_table_create = ("""CREATE TABLE IF NOT EXISTS songs
                      (song_id varchar PRIMARY KEY,
                      title varchar,
                      artist_id varchar,
-                     year numeric,
-                     duration numeric)""")
+                     year int,
+                     duration DECIMAL)""")
 
 artist_table_create = ("""CREATE TABLE IF NOT EXISTS artists
                        (artist_id varchar PRIMARY KEY,
                        artist_name varchar,
                        artist_location varchar,
-                       artist_latitude decimal,
-                       artist_longitude decimal)""")
+                       artist_latitude DECIMAL,
+                       artist_longitude DECIMAL)""")
 
 time_table_create = ("""CREATE TABLE IF NOT EXISTS time
                      (start_time timestamp PRIMARY KEY,
