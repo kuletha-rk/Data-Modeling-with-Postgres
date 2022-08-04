@@ -36,28 +36,28 @@ NOTE: You will not be able to run `test.ipynb`,`etl.ipynb`, or `etl.py` until yo
 
 1. Create Tables
 - [x] Write CREATE statements in `sql_queries.py` to create each table.
-- [] Write DROP statements in `sql_queries.py` to drop each table if it exists.
-- [] Run `create_tables.py` to create your database and tables.
-- [] Run `test.ipynb` to confirm the creation of your tables with the correct columns. Make sure to click "Restart kernel" to close the connection to the database after running this notebook.
+- [x] Write DROP statements in `sql_queries.py` to drop each table if it exists.
+- [x] Run `create_tables.py` to create your database and tables.
+- [x] Run `test.ipynb` to confirm the creation of your tables with the correct columns. Make sure to click "Restart kernel" to close the connection to the database after running this notebook.
 
 2. Build ETL Processes
-- [] Follow instructions in the `etl.ipynb` notebook to develop ETL processes for each table. At the end of each table section, or at the end of the notebook, run `test.ipynb` to confirm that records were successfully inserted into each table. Remember to rerun `create_tables.py` to reset your tables before each time you run this notebook.
+- [x] Follow instructions in the `etl.ipynb` notebook to develop ETL processes for each table. At the end of each table section, or at the end of the notebook, run `test.ipynb` to confirm that records were successfully inserted into each table. Remember to rerun `create_tables.py` to reset your tables before each time you run this notebook.
 
 3. Build ETL Pipeline
-- [] Use what you've completed in `etl.ipynb` to complete `etl.py`, where you'll process the entire datasets. Remember to `run create_tables.py` before running `etl.py` to reset your tables. Run `test.ipynb` to confirm your records were successfully inserted into each table.
+- [x] Use what you've completed in `etl.ipynb` to complete `etl.py`, where you'll process the entire datasets. Remember to `run create_tables.py` before running `etl.py` to reset your tables. Run `test.ipynb` to confirm your records were successfully inserted into each table.
 
 4. Run Sanity Tests
-- [] When you are satisfied with your work, run the cell under the Sanity Tests section in the `test.ipynb` notebook. The cells contain some basic tests that will evaluate your work and catch any silly mistakes. We test column data types, primary key constraints and not-null constraints as well look for on-conflict clauses wherever required. If any of the test cases catches a problem, you will see a warning message printed in Orange that looks like this:
+- [x] When you are satisfied with your work, run the cell under the Sanity Tests section in the `test.ipynb` notebook. The cells contain some basic tests that will evaluate your work and catch any silly mistakes. We test column data types, primary key constraints and not-null constraints as well look for on-conflict clauses wherever required. If any of the test cases catches a problem, you will see a warning message printed in Orange that looks like this:
 
 [WARNING] The songplays table does not have a primary key!
 You may want to make appropriate changes to your code to make these warning messages go away. The tests below are only meant to help you make your work foolproof. The submission will still be graded by a human grader against the project rubric.
 
 **Document Process**
 Do the following steps in your README.md file.
-- [] Discuss the purpose of this database in the context of the startup, Sparkify, and their analytical goals.
-- [] How to run the Python scripts
-- [] An explanation of the files in the repository
-- [] State and justify your database schema design and ETL pipeline.
+- [x] Discuss the purpose of this database in the context of the startup, Sparkify, and their analytical goals.
+- [x] How to run the Python scripts
+- [x] An explanation of the files in the repository
+- [x] State and justify your database schema design and ETL pipeline.
 - [] [Optional] Provide example queries and results for song play analysis.
 - [] Here's a [Guide] (https://www.markdownguide.org/basic-syntax/guide) on Markdown Syntax.*
-- [] Provide DOCSTRING statement in each function implementation to describe what each function does.
+- [x] Provide DOCSTRING statement in each function implementation to describe what each function does.
