@@ -80,7 +80,7 @@ Files in this repository:
 Clone the repository into a local machine using
 
 ```sh
-git clone https://github.com/vineeths96/Data-Engineering-Nanodegree
+git clone https://github.com/kuletha-rk/Data-Modeling-with-Postgres/tree/Project1-Data-Modeling-with-Postgres
 ```
 
 ### Prerequisites
