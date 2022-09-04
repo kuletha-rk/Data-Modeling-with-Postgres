@@ -53,7 +53,8 @@ The Star Database Schema used for data modeling in this ETL pipeline. There is o
 
 An entity relationship diagram (ERD) of the data model is given below. 
 
-![database](./images/database.png)
+<img width="1031" alt="image" src="https://user-images.githubusercontent.com/64292970/188305529-b9c25932-0175-4221-97dc-797ab9f27e9c.png">
+
 
 ## Project structure
 
